@@ -28,7 +28,6 @@ while run:
     password = ""
     for i in range(length):
         password += random.choice(chars)
-
     if password not in wrongPasswords:
         if password != correctPassword:
             print(password)
@@ -37,8 +36,6 @@ while run:
             run = False
             print(f"{password} is correct")
             break
-
-# Р Р°СЃС€РёС„СЂРѕРІРєР°
 iv = cipher_text[:BS]
 cipher = AES.new(key, AES.MODE_CBC, iv)
 plain_text = unpad(cipher.decrypt(cipher_text[BS:])).decode()
