@@ -1,3 +1,5 @@
+```python
+
 from Crypto.Cipher import AES
 from Crypto import Random
 import hashlib
@@ -40,3 +42,6 @@ iv = cipher_text[:BS]
 cipher = AES.new(key, AES.MODE_CBC, iv)
 plain_text = unpad(cipher.decrypt(cipher_text[BS:])).decode()
 print("\nPlain text:", plain_text)
+
+
+```
